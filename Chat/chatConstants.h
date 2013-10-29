@@ -14,4 +14,5 @@
 #define CHAT_GROUPS_COLLECTION @"525bf8e48ab3a3212a06bd83"
 #define CHAT_GROUP_NAME_FIELD @"groupName"
 #define CHAT_CONVERSATION_SEGUE @"segueConversation"
+#define CHAT_SKIP_START
 #endif

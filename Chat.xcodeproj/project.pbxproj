@@ -7,29 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D41ACC01820341800E84BCD /* chatModalActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D41ACBF1820341800E84BCD /* chatModalActivityIndicatorView.m */; };
+		8D46AA3918202B5D0031C9E4 /* logging_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA1918202B5D0031C9E4 /* logging_mosq.c */; };
+		8D46AA3A18202B5D0031C9E4 /* memory_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA1B18202B5D0031C9E4 /* memory_mosq.c */; };
+		8D46AA3B18202B5D0031C9E4 /* messages_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA1D18202B5D0031C9E4 /* messages_mosq.c */; };
+		8D46AA3C18202B5D0031C9E4 /* mosquitto.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA1F18202B5D0031C9E4 /* mosquitto.c */; };
+		8D46AA3D18202B5D0031C9E4 /* MosquittoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA2318202B5D0031C9E4 /* MosquittoClient.m */; };
+		8D46AA3E18202B5D0031C9E4 /* MosquittoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA2518202B5D0031C9E4 /* MosquittoMessage.m */; };
+		8D46AA3F18202B5D0031C9E4 /* net_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA2718202B5D0031C9E4 /* net_mosq.c */; };
+		8D46AA4018202B5D0031C9E4 /* read_handle.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA2918202B5D0031C9E4 /* read_handle.c */; };
+		8D46AA4118202B5D0031C9E4 /* read_handle_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA2B18202B5D0031C9E4 /* read_handle_client.c */; };
+		8D46AA4218202B5D0031C9E4 /* read_handle_shared.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA2C18202B5D0031C9E4 /* read_handle_shared.c */; };
+		8D46AA4318202B5D0031C9E4 /* send_client_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA2D18202B5D0031C9E4 /* send_client_mosq.c */; };
+		8D46AA4418202B5D0031C9E4 /* send_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA2E18202B5D0031C9E4 /* send_mosq.c */; };
+		8D46AA4518202B5D0031C9E4 /* thread_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA3018202B5D0031C9E4 /* thread_mosq.c */; };
+		8D46AA4618202B5D0031C9E4 /* time_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA3118202B5D0031C9E4 /* time_mosq.c */; };
+		8D46AA4718202B5D0031C9E4 /* tls_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA3318202B5D0031C9E4 /* tls_mosq.c */; };
+		8D46AA4818202B5D0031C9E4 /* util_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA3518202B5D0031C9E4 /* util_mosq.c */; };
+		8D46AA4918202B5D0031C9E4 /* will_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA3718202B5D0031C9E4 /* will_mosq.c */; };
+		8D46AA4E18202B7B0031C9E4 /* MQTTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA4B18202B7B0031C9E4 /* MQTTClient.m */; };
+		8D46AA4F18202B7B0031C9E4 /* MQTTMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA4D18202B7B0031C9E4 /* MQTTMessage.m */; };
 		8D9414E5181AD0F600108877 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9414E4181AD0F600108877 /* main.m */; };
 		8D9414E8181AD10900108877 /* chatAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9414E7181AD10900108877 /* chatAppDelegate.m */; };
 		8D9414E9181AD16F00108877 /* chatLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEF615181ACCFF00AD1A59 /* chatLoginViewController.m */; };
 		8D9414ED181AE43500108877 /* chatNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9414EC181AE43500108877 /* chatNavigationViewController.m */; };
-		8D941512181AF33500108877 /* logging_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D9414F2181AF33500108877 /* logging_mosq.c */; };
-		8D941513181AF33500108877 /* memory_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D9414F4181AF33500108877 /* memory_mosq.c */; };
-		8D941514181AF33500108877 /* messages_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D9414F6181AF33500108877 /* messages_mosq.c */; };
-		8D941515181AF33500108877 /* mosquitto.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D9414F8181AF33500108877 /* mosquitto.c */; };
-		8D941516181AF33500108877 /* MosquittoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9414FC181AF33500108877 /* MosquittoClient.m */; };
-		8D941517181AF33500108877 /* MosquittoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9414FE181AF33500108877 /* MosquittoMessage.m */; };
-		8D941518181AF33500108877 /* net_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D941500181AF33500108877 /* net_mosq.c */; };
-		8D941519181AF33500108877 /* read_handle.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D941502181AF33500108877 /* read_handle.c */; };
-		8D94151A181AF33500108877 /* read_handle_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D941504181AF33500108877 /* read_handle_client.c */; };
-		8D94151B181AF33500108877 /* read_handle_shared.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D941505181AF33500108877 /* read_handle_shared.c */; };
-		8D94151C181AF33500108877 /* send_client_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D941506181AF33500108877 /* send_client_mosq.c */; };
-		8D94151D181AF33500108877 /* send_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D941507181AF33500108877 /* send_mosq.c */; };
-		8D94151E181AF33500108877 /* thread_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D941509181AF33500108877 /* thread_mosq.c */; };
-		8D94151F181AF33500108877 /* time_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D94150A181AF33500108877 /* time_mosq.c */; };
-		8D941520181AF33500108877 /* tls_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D94150C181AF33500108877 /* tls_mosq.c */; };
-		8D941521181AF33500108877 /* util_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D94150E181AF33500108877 /* util_mosq.c */; };
-		8D941522181AF33500108877 /* will_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D941510181AF33500108877 /* will_mosq.c */; };
-		8D941527181AF34300108877 /* MQTTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D941524181AF34300108877 /* MQTTClient.m */; };
-		8D941528181AF34300108877 /* MQTTMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D941526181AF34300108877 /* MQTTMessage.m */; };
 		8DA32F45181AAEF300439123 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA32F44181AAEF300439123 /* Foundation.framework */; };
 		8DA32F47181AAEF300439123 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA32F46181AAEF300439123 /* CoreGraphics.framework */; };
 		8DA32F49181AAEF300439123 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA32F48181AAEF300439123 /* UIKit.framework */; };
@@ -65,6 +66,46 @@
 /* Begin PBXFileReference section */
 		478B5ACF9B4E4F4C9F96F74C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5989904079844F888FE10C4A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		8D41ACBE1820341800E84BCD /* chatModalActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatModalActivityIndicatorView.h; sourceTree = "<group>"; };
+		8D41ACBF1820341800E84BCD /* chatModalActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatModalActivityIndicatorView.m; sourceTree = "<group>"; };
+		8D46AA1718202B5D0031C9E4 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		8D46AA1818202B5D0031C9E4 /* dummypthread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dummypthread.h; sourceTree = "<group>"; };
+		8D46AA1918202B5D0031C9E4 /* logging_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = logging_mosq.c; sourceTree = "<group>"; };
+		8D46AA1A18202B5D0031C9E4 /* logging_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logging_mosq.h; sourceTree = "<group>"; };
+		8D46AA1B18202B5D0031C9E4 /* memory_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memory_mosq.c; sourceTree = "<group>"; };
+		8D46AA1C18202B5D0031C9E4 /* memory_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory_mosq.h; sourceTree = "<group>"; };
+		8D46AA1D18202B5D0031C9E4 /* messages_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = messages_mosq.c; sourceTree = "<group>"; };
+		8D46AA1E18202B5D0031C9E4 /* messages_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messages_mosq.h; sourceTree = "<group>"; };
+		8D46AA1F18202B5D0031C9E4 /* mosquitto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mosquitto.c; sourceTree = "<group>"; };
+		8D46AA2018202B5D0031C9E4 /* mosquitto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mosquitto.h; sourceTree = "<group>"; };
+		8D46AA2118202B5D0031C9E4 /* mosquitto_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mosquitto_internal.h; sourceTree = "<group>"; };
+		8D46AA2218202B5D0031C9E4 /* MosquittoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MosquittoClient.h; sourceTree = "<group>"; };
+		8D46AA2318202B5D0031C9E4 /* MosquittoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MosquittoClient.m; sourceTree = "<group>"; };
+		8D46AA2418202B5D0031C9E4 /* MosquittoMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MosquittoMessage.h; sourceTree = "<group>"; };
+		8D46AA2518202B5D0031C9E4 /* MosquittoMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MosquittoMessage.m; sourceTree = "<group>"; };
+		8D46AA2618202B5D0031C9E4 /* mqtt3_protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mqtt3_protocol.h; sourceTree = "<group>"; };
+		8D46AA2718202B5D0031C9E4 /* net_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = net_mosq.c; sourceTree = "<group>"; };
+		8D46AA2818202B5D0031C9E4 /* net_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = net_mosq.h; sourceTree = "<group>"; };
+		8D46AA2918202B5D0031C9E4 /* read_handle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = read_handle.c; sourceTree = "<group>"; };
+		8D46AA2A18202B5D0031C9E4 /* read_handle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = read_handle.h; sourceTree = "<group>"; };
+		8D46AA2B18202B5D0031C9E4 /* read_handle_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = read_handle_client.c; sourceTree = "<group>"; };
+		8D46AA2C18202B5D0031C9E4 /* read_handle_shared.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = read_handle_shared.c; sourceTree = "<group>"; };
+		8D46AA2D18202B5D0031C9E4 /* send_client_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = send_client_mosq.c; sourceTree = "<group>"; };
+		8D46AA2E18202B5D0031C9E4 /* send_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = send_mosq.c; sourceTree = "<group>"; };
+		8D46AA2F18202B5D0031C9E4 /* send_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = send_mosq.h; sourceTree = "<group>"; };
+		8D46AA3018202B5D0031C9E4 /* thread_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = thread_mosq.c; sourceTree = "<group>"; };
+		8D46AA3118202B5D0031C9E4 /* time_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = time_mosq.c; sourceTree = "<group>"; };
+		8D46AA3218202B5D0031C9E4 /* time_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time_mosq.h; sourceTree = "<group>"; };
+		8D46AA3318202B5D0031C9E4 /* tls_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tls_mosq.c; sourceTree = "<group>"; };
+		8D46AA3418202B5D0031C9E4 /* tls_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tls_mosq.h; sourceTree = "<group>"; };
+		8D46AA3518202B5D0031C9E4 /* util_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util_mosq.c; sourceTree = "<group>"; };
+		8D46AA3618202B5D0031C9E4 /* util_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util_mosq.h; sourceTree = "<group>"; };
+		8D46AA3718202B5D0031C9E4 /* will_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = will_mosq.c; sourceTree = "<group>"; };
+		8D46AA3818202B5D0031C9E4 /* will_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = will_mosq.h; sourceTree = "<group>"; };
+		8D46AA4A18202B7B0031C9E4 /* MQTTClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQTTClient.h; sourceTree = "<group>"; };
+		8D46AA4B18202B7B0031C9E4 /* MQTTClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQTTClient.m; sourceTree = "<group>"; };
+		8D46AA4C18202B7B0031C9E4 /* MQTTMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQTTMessage.h; sourceTree = "<group>"; };
+		8D46AA4D18202B7B0031C9E4 /* MQTTMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQTTMessage.m; sourceTree = "<group>"; };
 		8D9414DF181ACD7400108877 /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
 		8D9414E4181AD0F600108877 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Chat/main.m; sourceTree = "<group>"; };
 		8D9414E6181AD10900108877 /* chatAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chatAppDelegate.h; path = Chat/chatAppDelegate.h; sourceTree = "<group>"; };
@@ -72,44 +113,6 @@
 		8D9414EB181AE43500108877 /* chatNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatNavigationViewController.h; sourceTree = "<group>"; };
 		8D9414EC181AE43500108877 /* chatNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatNavigationViewController.m; sourceTree = "<group>"; };
 		8D9414EE181AE8B600108877 /* CBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBConstants.h; sourceTree = "<group>"; };
-		8D9414F0181AF33500108877 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
-		8D9414F1181AF33500108877 /* dummypthread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dummypthread.h; sourceTree = "<group>"; };
-		8D9414F2181AF33500108877 /* logging_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = logging_mosq.c; sourceTree = "<group>"; };
-		8D9414F3181AF33500108877 /* logging_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logging_mosq.h; sourceTree = "<group>"; };
-		8D9414F4181AF33500108877 /* memory_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memory_mosq.c; sourceTree = "<group>"; };
-		8D9414F5181AF33500108877 /* memory_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory_mosq.h; sourceTree = "<group>"; };
-		8D9414F6181AF33500108877 /* messages_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = messages_mosq.c; sourceTree = "<group>"; };
-		8D9414F7181AF33500108877 /* messages_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messages_mosq.h; sourceTree = "<group>"; };
-		8D9414F8181AF33500108877 /* mosquitto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mosquitto.c; sourceTree = "<group>"; };
-		8D9414F9181AF33500108877 /* mosquitto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mosquitto.h; sourceTree = "<group>"; };
-		8D9414FA181AF33500108877 /* mosquitto_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mosquitto_internal.h; sourceTree = "<group>"; };
-		8D9414FB181AF33500108877 /* MosquittoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MosquittoClient.h; sourceTree = "<group>"; };
-		8D9414FC181AF33500108877 /* MosquittoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MosquittoClient.m; sourceTree = "<group>"; };
-		8D9414FD181AF33500108877 /* MosquittoMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MosquittoMessage.h; sourceTree = "<group>"; };
-		8D9414FE181AF33500108877 /* MosquittoMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MosquittoMessage.m; sourceTree = "<group>"; };
-		8D9414FF181AF33500108877 /* mqtt3_protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mqtt3_protocol.h; sourceTree = "<group>"; };
-		8D941500181AF33500108877 /* net_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = net_mosq.c; sourceTree = "<group>"; };
-		8D941501181AF33500108877 /* net_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = net_mosq.h; sourceTree = "<group>"; };
-		8D941502181AF33500108877 /* read_handle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = read_handle.c; sourceTree = "<group>"; };
-		8D941503181AF33500108877 /* read_handle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = read_handle.h; sourceTree = "<group>"; };
-		8D941504181AF33500108877 /* read_handle_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = read_handle_client.c; sourceTree = "<group>"; };
-		8D941505181AF33500108877 /* read_handle_shared.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = read_handle_shared.c; sourceTree = "<group>"; };
-		8D941506181AF33500108877 /* send_client_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = send_client_mosq.c; sourceTree = "<group>"; };
-		8D941507181AF33500108877 /* send_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = send_mosq.c; sourceTree = "<group>"; };
-		8D941508181AF33500108877 /* send_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = send_mosq.h; sourceTree = "<group>"; };
-		8D941509181AF33500108877 /* thread_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = thread_mosq.c; sourceTree = "<group>"; };
-		8D94150A181AF33500108877 /* time_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = time_mosq.c; sourceTree = "<group>"; };
-		8D94150B181AF33500108877 /* time_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time_mosq.h; sourceTree = "<group>"; };
-		8D94150C181AF33500108877 /* tls_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tls_mosq.c; sourceTree = "<group>"; };
-		8D94150D181AF33500108877 /* tls_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tls_mosq.h; sourceTree = "<group>"; };
-		8D94150E181AF33500108877 /* util_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util_mosq.c; sourceTree = "<group>"; };
-		8D94150F181AF33500108877 /* util_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util_mosq.h; sourceTree = "<group>"; };
-		8D941510181AF33500108877 /* will_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = will_mosq.c; sourceTree = "<group>"; };
-		8D941511181AF33500108877 /* will_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = will_mosq.h; sourceTree = "<group>"; };
-		8D941523181AF34300108877 /* MQTTClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MQTTClient.h; path = ../ClearBladeAPI/MQTTClient.h; sourceTree = "<group>"; };
-		8D941524181AF34300108877 /* MQTTClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MQTTClient.m; path = ../ClearBladeAPI/MQTTClient.m; sourceTree = "<group>"; };
-		8D941525181AF34300108877 /* MQTTMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MQTTMessage.h; path = ../ClearBladeAPI/MQTTMessage.h; sourceTree = "<group>"; };
-		8D941526181AF34300108877 /* MQTTMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MQTTMessage.m; path = ../ClearBladeAPI/MQTTMessage.m; sourceTree = "<group>"; };
 		8DA32F41181AAEF300439123 /* Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA32F44181AAEF300439123 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8DA32F46181AAEF300439123 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -173,51 +176,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8D9414EF181AF33500108877 /* libmosquitto */ = {
+		8D46AA1618202B5D0031C9E4 /* libmosquitto */ = {
 			isa = PBXGroup;
 			children = (
-				8D9414F0181AF33500108877 /* config.h */,
-				8D9414F1181AF33500108877 /* dummypthread.h */,
-				8D9414F2181AF33500108877 /* logging_mosq.c */,
-				8D9414F3181AF33500108877 /* logging_mosq.h */,
-				8D9414F4181AF33500108877 /* memory_mosq.c */,
-				8D9414F5181AF33500108877 /* memory_mosq.h */,
-				8D9414F6181AF33500108877 /* messages_mosq.c */,
-				8D9414F7181AF33500108877 /* messages_mosq.h */,
-				8D9414F8181AF33500108877 /* mosquitto.c */,
-				8D9414F9181AF33500108877 /* mosquitto.h */,
-				8D9414FA181AF33500108877 /* mosquitto_internal.h */,
-				8D9414FB181AF33500108877 /* MosquittoClient.h */,
-				8D9414FC181AF33500108877 /* MosquittoClient.m */,
-				8D9414FD181AF33500108877 /* MosquittoMessage.h */,
-				8D9414FE181AF33500108877 /* MosquittoMessage.m */,
-				8D9414FF181AF33500108877 /* mqtt3_protocol.h */,
-				8D941500181AF33500108877 /* net_mosq.c */,
-				8D941501181AF33500108877 /* net_mosq.h */,
-				8D941502181AF33500108877 /* read_handle.c */,
-				8D941503181AF33500108877 /* read_handle.h */,
-				8D941504181AF33500108877 /* read_handle_client.c */,
-				8D941505181AF33500108877 /* read_handle_shared.c */,
-				8D941506181AF33500108877 /* send_client_mosq.c */,
-				8D941507181AF33500108877 /* send_mosq.c */,
-				8D941508181AF33500108877 /* send_mosq.h */,
-				8D941509181AF33500108877 /* thread_mosq.c */,
-				8D94150A181AF33500108877 /* time_mosq.c */,
-				8D94150B181AF33500108877 /* time_mosq.h */,
-				8D94150C181AF33500108877 /* tls_mosq.c */,
-				8D94150D181AF33500108877 /* tls_mosq.h */,
-				8D94150E181AF33500108877 /* util_mosq.c */,
-				8D94150F181AF33500108877 /* util_mosq.h */,
-				8D941510181AF33500108877 /* will_mosq.c */,
-				8D941511181AF33500108877 /* will_mosq.h */,
+				8D46AA1718202B5D0031C9E4 /* config.h */,
+				8D46AA1818202B5D0031C9E4 /* dummypthread.h */,
+				8D46AA1918202B5D0031C9E4 /* logging_mosq.c */,
+				8D46AA1A18202B5D0031C9E4 /* logging_mosq.h */,
+				8D46AA1B18202B5D0031C9E4 /* memory_mosq.c */,
+				8D46AA1C18202B5D0031C9E4 /* memory_mosq.h */,
+				8D46AA1D18202B5D0031C9E4 /* messages_mosq.c */,
+				8D46AA1E18202B5D0031C9E4 /* messages_mosq.h */,
+				8D46AA1F18202B5D0031C9E4 /* mosquitto.c */,
+				8D46AA2018202B5D0031C9E4 /* mosquitto.h */,
+				8D46AA2118202B5D0031C9E4 /* mosquitto_internal.h */,
+				8D46AA2218202B5D0031C9E4 /* MosquittoClient.h */,
+				8D46AA2318202B5D0031C9E4 /* MosquittoClient.m */,
+				8D46AA2418202B5D0031C9E4 /* MosquittoMessage.h */,
+				8D46AA2518202B5D0031C9E4 /* MosquittoMessage.m */,
+				8D46AA2618202B5D0031C9E4 /* mqtt3_protocol.h */,
+				8D46AA2718202B5D0031C9E4 /* net_mosq.c */,
+				8D46AA2818202B5D0031C9E4 /* net_mosq.h */,
+				8D46AA2918202B5D0031C9E4 /* read_handle.c */,
+				8D46AA2A18202B5D0031C9E4 /* read_handle.h */,
+				8D46AA2B18202B5D0031C9E4 /* read_handle_client.c */,
+				8D46AA2C18202B5D0031C9E4 /* read_handle_shared.c */,
+				8D46AA2D18202B5D0031C9E4 /* send_client_mosq.c */,
+				8D46AA2E18202B5D0031C9E4 /* send_mosq.c */,
+				8D46AA2F18202B5D0031C9E4 /* send_mosq.h */,
+				8D46AA3018202B5D0031C9E4 /* thread_mosq.c */,
+				8D46AA3118202B5D0031C9E4 /* time_mosq.c */,
+				8D46AA3218202B5D0031C9E4 /* time_mosq.h */,
+				8D46AA3318202B5D0031C9E4 /* tls_mosq.c */,
+				8D46AA3418202B5D0031C9E4 /* tls_mosq.h */,
+				8D46AA3518202B5D0031C9E4 /* util_mosq.c */,
+				8D46AA3618202B5D0031C9E4 /* util_mosq.h */,
+				8D46AA3718202B5D0031C9E4 /* will_mosq.c */,
+				8D46AA3818202B5D0031C9E4 /* will_mosq.h */,
 			);
-			name = libmosquitto;
-			path = ../ClearBladeAPI/libmosquitto;
+			path = libmosquitto;
 			sourceTree = "<group>";
 		};
 		8DA32F38181AAEF300439123 = {
 			isa = PBXGroup;
 			children = (
+				8D41ACBE1820341800E84BCD /* chatModalActivityIndicatorView.h */,
+				8D41ACBF1820341800E84BCD /* chatModalActivityIndicatorView.m */,
 				8D9414EB181AE43500108877 /* chatNavigationViewController.h */,
 				8D9414EC181AE43500108877 /* chatNavigationViewController.m */,
 				8D9414E6181AD10900108877 /* chatAppDelegate.h */,
@@ -292,11 +296,11 @@
 		8DAEF625181ACD1300AD1A59 /* CBAPI */ = {
 			isa = PBXGroup;
 			children = (
-				8D9414EF181AF33500108877 /* libmosquitto */,
-				8D941523181AF34300108877 /* MQTTClient.h */,
-				8D941524181AF34300108877 /* MQTTClient.m */,
-				8D941525181AF34300108877 /* MQTTMessage.h */,
-				8D941526181AF34300108877 /* MQTTMessage.m */,
+				8D46AA4A18202B7B0031C9E4 /* MQTTClient.h */,
+				8D46AA4B18202B7B0031C9E4 /* MQTTClient.m */,
+				8D46AA4C18202B7B0031C9E4 /* MQTTMessage.h */,
+				8D46AA4D18202B7B0031C9E4 /* MQTTMessage.m */,
+				8D46AA1618202B5D0031C9E4 /* libmosquitto */,
 				8DAEF602181ACCFF00AD1A59 /* CBAPI.h */,
 				8DAEF603181ACCFF00AD1A59 /* CBCollection.h */,
 				8DAEF604181ACCFF00AD1A59 /* CBCollection.m */,
@@ -444,37 +448,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D94151E181AF33500108877 /* thread_mosq.c in Sources */,
+				8D46AA4518202B5D0031C9E4 /* thread_mosq.c in Sources */,
 				8D9414ED181AE43500108877 /* chatNavigationViewController.m in Sources */,
-				8D94151C181AF33500108877 /* send_client_mosq.c in Sources */,
-				8D941519181AF33500108877 /* read_handle.c in Sources */,
-				8D94151B181AF33500108877 /* read_handle_shared.c in Sources */,
-				8D941515181AF33500108877 /* mosquitto.c in Sources */,
-				8D94151D181AF33500108877 /* send_mosq.c in Sources */,
+				8D46AA4318202B5D0031C9E4 /* send_client_mosq.c in Sources */,
+				8D46AA4018202B5D0031C9E4 /* read_handle.c in Sources */,
+				8D46AA4218202B5D0031C9E4 /* read_handle_shared.c in Sources */,
+				8D46AA3C18202B5D0031C9E4 /* mosquitto.c in Sources */,
+				8D46AA4418202B5D0031C9E4 /* send_mosq.c in Sources */,
 				8D9414E5181AD0F600108877 /* main.m in Sources */,
-				8D941527181AF34300108877 /* MQTTClient.m in Sources */,
-				8D941522181AF33500108877 /* will_mosq.c in Sources */,
+				8D46AA4E18202B7B0031C9E4 /* MQTTClient.m in Sources */,
+				8D46AA4918202B5D0031C9E4 /* will_mosq.c in Sources */,
 				8DAEF61A181ACCFF00AD1A59 /* CBCollection.m in Sources */,
 				8DAEF624181ACCFF00AD1A59 /* ClearBlade.m in Sources */,
 				8DAEF61C181ACCFF00AD1A59 /* CBItem.m in Sources */,
 				8DAEF620181ACCFF00AD1A59 /* chatConversationViewController.m in Sources */,
-				8D941516181AF33500108877 /* MosquittoClient.m in Sources */,
-				8D941514181AF33500108877 /* messages_mosq.c in Sources */,
-				8D94151F181AF33500108877 /* time_mosq.c in Sources */,
-				8D94151A181AF33500108877 /* read_handle_client.c in Sources */,
-				8D941518181AF33500108877 /* net_mosq.c in Sources */,
+				8D46AA3D18202B5D0031C9E4 /* MosquittoClient.m in Sources */,
+				8D46AA3B18202B5D0031C9E4 /* messages_mosq.c in Sources */,
+				8D46AA4618202B5D0031C9E4 /* time_mosq.c in Sources */,
+				8D46AA4118202B5D0031C9E4 /* read_handle_client.c in Sources */,
+				8D46AA3F18202B5D0031C9E4 /* net_mosq.c in Sources */,
 				8DAEF621181ACCFF00AD1A59 /* chatGroupsViewController.m in Sources */,
 				8DAEF623181ACCFF00AD1A59 /* chatViewController.m in Sources */,
 				8DAEF61B181ACCFF00AD1A59 /* CBHTTPClient.m in Sources */,
 				8D9414E9181AD16F00108877 /* chatLoginViewController.m in Sources */,
-				8D941521181AF33500108877 /* util_mosq.c in Sources */,
-				8D941517181AF33500108877 /* MosquittoMessage.m in Sources */,
-				8D941512181AF33500108877 /* logging_mosq.c in Sources */,
+				8D46AA4818202B5D0031C9E4 /* util_mosq.c in Sources */,
+				8D46AA3E18202B5D0031C9E4 /* MosquittoMessage.m in Sources */,
+				8D46AA3918202B5D0031C9E4 /* logging_mosq.c in Sources */,
+				8D41ACC01820341800E84BCD /* chatModalActivityIndicatorView.m in Sources */,
 				8DAEF61D181ACCFF00AD1A59 /* CBQuery.m in Sources */,
-				8D941513181AF33500108877 /* memory_mosq.c in Sources */,
+				8D46AA3A18202B5D0031C9E4 /* memory_mosq.c in Sources */,
 				8D9414E8181AD10900108877 /* chatAppDelegate.m in Sources */,
-				8D941520181AF33500108877 /* tls_mosq.c in Sources */,
-				8D941528181AF34300108877 /* MQTTMessage.m in Sources */,
+				8D46AA4718202B5D0031C9E4 /* tls_mosq.c in Sources */,
+				8D46AA4F18202B7B0031C9E4 /* MQTTMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
