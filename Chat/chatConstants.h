@@ -15,4 +15,5 @@
 #define CHAT_GROUP_NAME_FIELD @"groupName"
 #define CHAT_CONVERSATION_SEGUE @"segueConversation"
 #define CHAT_SKIP_START
+#define CHAT_SKIP_GROUPS
 #endif

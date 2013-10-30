@@ -191,50 +191,65 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qQs-Ju-tF8">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CRQ-mS-U89">
+                                        <rect key="frame" x="-34" y="566" width="277" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
                             </scrollView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KxE-2f-RpP">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem style="plain" id="FFM-CK-OSY">
-                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="wq2-0n-7WV">
-                                            <rect key="frame" x="16" y="7" width="236" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" id="qJ6-Bw-QEF">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2SA-nb-4we">
-                                            <rect key="frame" x="262" y="7" width="36" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="36" id="6fN-ii-9Pw"/>
-                                                <constraint firstAttribute="height" constant="30" id="KmY-Sb-H6q"/>
-                                            </constraints>
-                                            <state key="normal" title="Send">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
+                            <view contentMode="redraw" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="ah3-5q-Rwb">
+                                <rect key="frame" x="0.0" y="506" width="320" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" misplaced="YES" placeholderIntrinsicWidth="246" placeholderIntrinsicHeight="28" text="Line 1" translatesAutoresizingMaskIntoConstraints="NO" id="7v1-er-n6O">
+                                        <rect key="frame" x="20" y="17" width="246" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yc9-Qi-Zbp">
+                                        <rect key="frame" x="274" y="19" width="36" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendMessage:" destination="ysW-3s-tWU" eventType="touchUpInside" id="SXo-R6-q1J"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7v1-er-n6O" secondAttribute="trailing" constant="54" id="6If-Bc-L9l"/>
+                                    <constraint firstItem="7v1-er-n6O" firstAttribute="top" secondItem="ah3-5q-Rwb" secondAttribute="top" constant="16" id="9aA-nx-oCK"/>
+                                    <constraint firstAttribute="centerY" secondItem="yc9-Qi-Zbp" secondAttribute="centerY" id="DHv-qD-RDD"/>
+                                    <constraint firstItem="7v1-er-n6O" firstAttribute="leading" secondItem="ah3-5q-Rwb" secondAttribute="leading" constant="20" id="kiA-YD-mvM"/>
+                                    <constraint firstAttribute="height" constant="62" id="lwP-jv-xz9"/>
+                                    <constraint firstAttribute="bottom" secondItem="7v1-er-n6O" secondAttribute="bottom" constant="15" id="syv-Cz-N07"/>
+                                    <constraint firstAttribute="trailing" secondItem="yc9-Qi-Zbp" secondAttribute="trailing" constant="10" id="uCe-Bz-S1m"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="KxE-2f-RpP" secondAttribute="trailing" id="Fzm-4R-aEl"/>
                             <constraint firstItem="qQs-Ju-tF8" firstAttribute="top" secondItem="wTO-BU-iWt" secondAttribute="top" id="HYH-rs-slD"/>
-                            <constraint firstItem="KxE-2f-RpP" firstAttribute="leading" secondItem="wTO-BU-iWt" secondAttribute="leading" id="I95-2q-Pom"/>
+                            <constraint firstAttribute="bottom" secondItem="ah3-5q-Rwb" secondAttribute="bottom" priority="250" id="Mdf-F3-Rbj"/>
                             <constraint firstAttribute="trailing" secondItem="qQs-Ju-tF8" secondAttribute="trailing" id="Sb5-UB-74n"/>
+                            <constraint firstItem="ah3-5q-Rwb" firstAttribute="leading" secondItem="wTO-BU-iWt" secondAttribute="leading" id="ab6-nP-THW"/>
                             <constraint firstItem="qQs-Ju-tF8" firstAttribute="leading" secondItem="wTO-BU-iWt" secondAttribute="leading" id="bp1-q8-34R"/>
-                            <constraint firstAttribute="bottom" secondItem="KxE-2f-RpP" secondAttribute="bottom" id="dTZ-dv-Vnc"/>
+                            <constraint firstAttribute="trailing" secondItem="ah3-5q-Rwb" secondAttribute="trailing" id="niz-eJ-B0U"/>
                             <constraint firstAttribute="bottom" secondItem="qQs-Ju-tF8" secondAttribute="bottom" id="yKa-bD-CPC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Conversation" id="Tx7-Ux-v3H"/>
                     <connections>
-                        <outlet property="bottomBar" destination="KxE-2f-RpP" id="Bfx-9l-yvT"/>
-                        <outlet property="messageField" destination="wq2-0n-7WV" id="Hx7-Ty-KBf"/>
+                        <outlet property="bottomBar" destination="ah3-5q-Rwb" id="Na6-tn-n0P"/>
+                        <outlet property="bottomBarDistanceFromBottom" destination="Mdf-F3-Rbj" id="rGU-9P-Ih9"/>
+                        <outlet property="bottomBarHeight" destination="lwP-jv-xz9" id="5fr-Uq-de2"/>
+                        <outlet property="messageField" destination="7v1-er-n6O" id="xod-Qt-MxC"/>
                         <outlet property="scrollView" destination="qQs-Ju-tF8" id="4W7-f8-F6U"/>
                     </connections>
                 </viewController>

@@ -101,10 +101,16 @@
     [self.collection fetchWithSuccessCallback:^(NSMutableArray *data) {
         [self.spinner stopAnimating];
         [self reload:data];
+#ifdef CHAT_SKIP_GROUPS
+        [self selectFirstGroup];
+#endif
     } ErrorCallback:^(NSError * error, id extra) {
         [self.spinner stopAnimating];
     }];
     
+}
+-(void)selectFirstGroup {
+    [self tableView:self.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
 }
 - (void)reload:(NSMutableArray *)data {
     self.data = data;

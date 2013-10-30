@@ -28,6 +28,19 @@
 {
     [super viewDidLoad];
     self.errorMessageField.hidden = YES;
+    
+#ifdef CHAT_SKIP_START
+    [self loginWithRandomName];
+#endif
+}
+-(void)loginWithRandomName {
+    unichar random[10];
+    sranddev();
+    for (int i = 0; i < 10; i++) {
+        random[i] = rand() % 26 + 'A';
+    }
+    self.userName = [NSString stringWithFormat:@"tyler_test_%@", [NSString stringWithCharacters:random length:10]];
+    [self loginClicked:self];
 }
 -(UIActivityIndicatorView *)spinner {
     if (!_spinner) {

@@ -11,8 +11,9 @@
 @interface chatConversationViewController : UIViewController
 @property (strong, nonatomic) NSString * groupName;
 @property (strong, nonatomic) NSString * userName;
-@property (strong, nonatomic) IBOutlet UIToolbar *bottomBar;
+@property (strong, nonatomic) IBOutlet UIView *bottomBar;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UITextField *messageField;
-@property (weak, nonatomic) IBOutlet UITextView *messageInput;
+@property (weak, nonatomic) IBOutlet UITextView *messageField;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomBarHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomBarDistanceFromBottom;
 @end
