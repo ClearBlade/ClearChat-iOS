@@ -11,4 +11,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *groupName;
 @end
 @interface chatGroupsViewController : UITableViewController
+@property (strong, nonatomic) NSString * userName;
 @end

@@ -25,6 +25,8 @@
 		8D41ACF11820A70800E84BCD /* tls_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D41ACDD1820A70800E84BCD /* tls_mosq.c */; };
 		8D41ACF21820A70800E84BCD /* util_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D41ACDF1820A70800E84BCD /* util_mosq.c */; };
 		8D41ACF31820A70800E84BCD /* will_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D41ACE11820A70800E84BCD /* will_mosq.c */; };
+		8D41ACF618215D0200E84BCD /* CBMessageClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D41ACF518215D0200E84BCD /* CBMessageClient.m */; };
+		8D41ACF918215F5700E84BCD /* CBMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D41ACF818215F5700E84BCD /* CBMessage.m */; };
 		8D46AA4E18202B7B0031C9E4 /* MQTTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA4B18202B7B0031C9E4 /* MQTTClient.m */; };
 		8D46AA4F18202B7B0031C9E4 /* MQTTMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D46AA4D18202B7B0031C9E4 /* MQTTMessage.m */; };
 		8D9414E5181AD0F600108877 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9414E4181AD0F600108877 /* main.m */; };
@@ -102,6 +104,10 @@
 		8D41ACE01820A70800E84BCD /* util_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util_mosq.h; sourceTree = "<group>"; };
 		8D41ACE11820A70800E84BCD /* will_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = will_mosq.c; sourceTree = "<group>"; };
 		8D41ACE21820A70800E84BCD /* will_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = will_mosq.h; sourceTree = "<group>"; };
+		8D41ACF418215D0200E84BCD /* CBMessageClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMessageClient.h; sourceTree = "<group>"; };
+		8D41ACF518215D0200E84BCD /* CBMessageClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMessageClient.m; sourceTree = "<group>"; };
+		8D41ACF718215F5700E84BCD /* CBMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMessage.h; sourceTree = "<group>"; };
+		8D41ACF818215F5700E84BCD /* CBMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMessage.m; sourceTree = "<group>"; };
 		8D46AA4A18202B7B0031C9E4 /* MQTTClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQTTClient.h; sourceTree = "<group>"; };
 		8D46AA4B18202B7B0031C9E4 /* MQTTClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQTTClient.m; sourceTree = "<group>"; };
 		8D46AA4C18202B7B0031C9E4 /* MQTTMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQTTMessage.h; sourceTree = "<group>"; };
@@ -296,6 +302,10 @@
 		8DAEF625181ACD1300AD1A59 /* CBAPI */ = {
 			isa = PBXGroup;
 			children = (
+				8D41ACF418215D0200E84BCD /* CBMessageClient.h */,
+				8D41ACF518215D0200E84BCD /* CBMessageClient.m */,
+				8D41ACF718215F5700E84BCD /* CBMessage.h */,
+				8D41ACF818215F5700E84BCD /* CBMessage.m */,
 				8D46AA4A18202B7B0031C9E4 /* MQTTClient.h */,
 				8D46AA4B18202B7B0031C9E4 /* MQTTClient.m */,
 				8D46AA4C18202B7B0031C9E4 /* MQTTMessage.h */,
@@ -448,9 +458,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D41ACF918215F5700E84BCD /* CBMessage.m in Sources */,
 				8D41ACED1820A70800E84BCD /* send_client_mosq.c in Sources */,
 				8D9414ED181AE43500108877 /* chatNavigationViewController.m in Sources */,
 				8D41ACEC1820A70800E84BCD /* read_handle.c in Sources */,
+				8D41ACF618215D0200E84BCD /* CBMessageClient.m in Sources */,
 				8D9414E5181AD0F600108877 /* main.m in Sources */,
 				8D41ACF01820A70800E84BCD /* time_mosq.c in Sources */,
 				8D41ACEB1820A70800E84BCD /* read_handle_shared.c in Sources */,

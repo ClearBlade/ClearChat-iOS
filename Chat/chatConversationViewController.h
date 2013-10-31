@@ -16,4 +16,5 @@
 @property (weak, nonatomic) IBOutlet UITextView *messageField;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomBarHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomBarDistanceFromBottom;
+@property (weak, nonatomic) IBOutlet UIButton *sendMessageButton;
 @end

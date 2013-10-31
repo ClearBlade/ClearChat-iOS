@@ -7,11 +7,13 @@
 //
 
 #import "chatConversationViewController.h"
-#import "MQTTClient.h"
+#import "CBMessageClient.h"
+#import "CBConstants.h"
 #import <QuartzCore/QuartzCore.h>
+#define MESSAGE_MARGIN 10
 
-@interface chatConversationViewController () <MQTTClientDelegate, UITextViewDelegate>
-@property (strong, nonatomic) MQTTClient * client;
+@interface chatConversationViewController () <CBMessageClientDelegate, UITextViewDelegate>
+@property (strong, nonatomic) CBMessageClient * client;
 @property (strong, nonatomic) NSMutableArray * messages;
 @end
 
@@ -25,9 +27,9 @@
     }
     return self;
 }
--(MQTTClient *)client {
+-(CBMessageClient *)client {
     if (!_client) {
-        _client = [[MQTTClient alloc] initWithClientId:self.userName];
+        _client = [[CBMessageClient alloc] init];
         _client.delegate = self;
     }
     return _client;
@@ -41,26 +43,11 @@
                    name:UIKeyboardWillShowNotification object:nil];
     [center addObserver:self selector:@selector(keyboardWillHide:)
                    name:UIKeyboardWillHideNotification object:nil];
-    [self.client connectToHost:@"platform.clearblade.com:1883/"];
+    [self.client connectToHost:[NSURL URLWithString:MESSAGE_PLATFORM_URL]];
     [self textViewDidChange:self.messageField];
 }
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-}
--(void)didConnect:(NSUInteger)code {
-    [self.client subscribe:self.groupName];
-}
--(void)didUnsubscribe:(NSUInteger)messageId {
-    
-}
--(void)didReceiveMessage:(MQTTMessage *)mqtt_msg {
-    [self addMessage:mqtt_msg.payload];
-}
--(void)didPublish:(NSUInteger)messageId {
-    
-}
--(void)didDisconnect {
     
 }
 -(void)keyboardWillShow:(NSNotification *)notification {
@@ -80,11 +67,19 @@
 -(void)addMessage:(NSString *)message {
     CGRect rect = self.view.frame;
     CGRect lastMessageRect = [[self.messages lastObject] frame];
-    rect.origin.y = lastMessageRect.origin.y + lastMessageRect.size.height + 1;
-    rect.size.height = 30;
-    UILabel * label = [[UILabel alloc] initWithFrame:rect];
-    label.backgroundColor = [UIColor blueColor];
+    rect.origin.y = lastMessageRect.origin.y + lastMessageRect.size.height + 10;
+    UITextView * label = [[UITextView alloc] init];
+    rect.size.width -= (MESSAGE_MARGIN * 2);
+    rect.origin.x += MESSAGE_MARGIN;
+    rect.size.height = [message boundingRectWithSize:(CGSize){rect.size.width,CGFLOAT_MAX}
+                                             options:NSStringDrawingUsesLineFragmentOrigin
+                                          attributes:@{NSFontAttributeName: self.messageField.font} //UITextView does not have a default font
+                                             context:nil].size.height + 10;
+    label.frame = rect;
+    label.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
     label.text = message;
+    label.scrollEnabled = NO;
+    label.editable = NO;
     [self.scrollView addSubview:label];
     self.scrollView.contentSize = CGSizeMake(rect.size.width, rect.origin.y + rect.size.height);
     [self.messages addObject:label];
@@ -95,20 +90,15 @@
     }
     return _messages;
 }
-- (void)didSubscribe:(NSUInteger)messageId grantedQos:(NSArray *)qos {
-    [self.messages removeAllObjects];
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)sendMessage:(id)sender {
-    NSString * text = self.messageField.text;
-    MQTTMessage * message = [[MQTTMessage alloc] init];
-    message.payload = text;
+    NSString * text = [NSString stringWithFormat:@"%@: %@", self.userName, self.messageField.text];
+    [self.client publishMessage:text toTopic:self.groupName];
     self.messageField.text = @"";
-    [self didReceiveMessage:message];
 }
 -(void)setMessageField:(UITextView *)messageField {
     _messageField = messageField;
@@ -118,10 +108,12 @@
     _messageField.delegate = self;
 }
 -(void)textViewDidChange:(UITextView *)textView {
-    CGFloat height = [textView.text boundingRectWithSize:(CGSize){textView.frame.size.width - 5,CGFLOAT_MAX}
-                                              options:NSStringDrawingUsesLineFragmentOrigin
-                                           attributes:@{NSFontAttributeName: textView.font}
-                                              context:nil].size.height + 15;
+
+    CGFloat height = [[textView.text stringByAppendingString:@"A"] //A is appended just so it will catch a ending newline
+                      boundingRectWithSize:(CGSize){textView.frame.size.width - 5,CGFLOAT_MAX}
+                      options:NSStringDrawingUsesLineFragmentOrigin
+                      attributes:@{NSFontAttributeName: textView.font}
+                      context:nil].size.height + 15;
     CGFloat heightDiff = ceil(height) - ceil(textView.frame.size.height);
     if (fabsf(heightDiff) > 3.0) {
         self.bottomBarHeight.constant += heightDiff;
@@ -129,6 +121,17 @@
             self.bottomBarHeight.constant = 120;
         }
     }
+    if (textView.text.length == 0) {
+        self.sendMessageButton.enabled = NO;
+    } else {
+        self.sendMessageButton.enabled = YES;
+    }
     
+}
+-(void)messageClient:(CBMessageClient *)client didConnect:(CBMessageClientConnectStatus)status {
+    [client subscribeToTopic:self.groupName];
+}
+-(void)messageClient:(CBMessageClient *)client didReceiveMessage:(CBMessage *)message {
+    [self addMessage:[message payloadText]];
 }
 @end

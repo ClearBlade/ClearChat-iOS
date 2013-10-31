@@ -13,5 +13,6 @@
 
 @interface chatNavigationViewController : UINavigationController
 @property (weak, nonatomic) id<chatNavigationViewControllerDelegate> logoutDelegate;
+@property (strong, nonatomic) NSString * userName;
 -(void)logOut;
 @end

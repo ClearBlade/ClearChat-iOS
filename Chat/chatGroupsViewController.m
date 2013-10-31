@@ -93,6 +93,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if ([self.navigationController isKindOfClass:[chatNavigationViewController class]]) {
+        chatNavigationViewController * controller = (chatNavigationViewController *)self.navigationController;
+        self.userName = controller.userName;
+    }
     [self.spinner startAnimating];
 }
 -(void)viewDidAppear:(BOOL)animated {
@@ -176,6 +180,7 @@
     }
     else {
         controller.groupName = [group getValueFor:CHAT_GROUP_NAME_FIELD];
+        controller.userName = self.userName;
     }
     [(UISearchDisplayController *)self.searchDisplayController  setActive:NO animated:YES];
     

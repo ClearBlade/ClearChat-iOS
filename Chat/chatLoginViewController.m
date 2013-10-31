@@ -81,6 +81,7 @@
     [newUser save];
     chatNavigationViewController * controller =[storyboard instantiateViewControllerWithIdentifier:POST_LOGIN_CONTROLLER];
     controller.logoutDelegate = self;
+    controller.userName = self.userName;
     [self presentViewController:controller animated:YES completion:^{}];
 }
 -(void)userMustNotBeEmpty {

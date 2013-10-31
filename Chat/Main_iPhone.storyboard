@@ -189,11 +189,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qQs-Ju-tF8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="506"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CRQ-mS-U89">
-                                        <rect key="frame" x="-34" y="566" width="277" height="65"/>
+                                        <rect key="frame" x="-34" y="566" width="277" height="3"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
@@ -203,14 +203,14 @@
                                 <rect key="frame" x="0.0" y="506" width="320" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" misplaced="YES" placeholderIntrinsicWidth="246" placeholderIntrinsicHeight="28" text="Line 1" translatesAutoresizingMaskIntoConstraints="NO" id="7v1-er-n6O">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" misplaced="YES" placeholderIntrinsicWidth="246" placeholderIntrinsicHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7v1-er-n6O">
                                         <rect key="frame" x="20" y="17" width="246" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yc9-Qi-Zbp">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yc9-Qi-Zbp">
                                         <rect key="frame" x="274" y="19" width="36" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Send">
@@ -235,13 +235,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ah3-5q-Rwb" firstAttribute="top" secondItem="qQs-Ju-tF8" secondAttribute="bottom" id="7tv-60-ul1"/>
                             <constraint firstItem="qQs-Ju-tF8" firstAttribute="top" secondItem="wTO-BU-iWt" secondAttribute="top" id="HYH-rs-slD"/>
                             <constraint firstAttribute="bottom" secondItem="ah3-5q-Rwb" secondAttribute="bottom" priority="250" id="Mdf-F3-Rbj"/>
                             <constraint firstAttribute="trailing" secondItem="qQs-Ju-tF8" secondAttribute="trailing" id="Sb5-UB-74n"/>
                             <constraint firstItem="ah3-5q-Rwb" firstAttribute="leading" secondItem="wTO-BU-iWt" secondAttribute="leading" id="ab6-nP-THW"/>
                             <constraint firstItem="qQs-Ju-tF8" firstAttribute="leading" secondItem="wTO-BU-iWt" secondAttribute="leading" id="bp1-q8-34R"/>
                             <constraint firstAttribute="trailing" secondItem="ah3-5q-Rwb" secondAttribute="trailing" id="niz-eJ-B0U"/>
-                            <constraint firstAttribute="bottom" secondItem="qQs-Ju-tF8" secondAttribute="bottom" id="yKa-bD-CPC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Conversation" id="Tx7-Ux-v3H"/>
@@ -251,6 +251,7 @@
                         <outlet property="bottomBarHeight" destination="lwP-jv-xz9" id="5fr-Uq-de2"/>
                         <outlet property="messageField" destination="7v1-er-n6O" id="xod-Qt-MxC"/>
                         <outlet property="scrollView" destination="qQs-Ju-tF8" id="4W7-f8-F6U"/>
+                        <outlet property="sendMessageButton" destination="yc9-Qi-Zbp" id="grJ-ST-jqX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVU-on-M0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
