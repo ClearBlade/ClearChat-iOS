@@ -12,8 +12,8 @@
 #define CHAT_USER_FIELD @"username"
 #define CHAT_GROUP_NAME_FIELD @"groupName"
 #define CHAT_CONVERSATION_SEGUE @"segueConversation"
-#define CHAT_SKIP_START
-#define CHAT_SKIP_GROUPS
+//#define CHAT_SKIP_START
+//#define CHAT_SKIP_GROUPS
 #ifdef USE_DEV
 #define CHAT_APP_KEY @"d6d48aa70aaa98d9ccf8defedf48" 
 #define CHAT_APP_SECRET @"D6D48AA70A96CAB8E89AFBB394F601"
