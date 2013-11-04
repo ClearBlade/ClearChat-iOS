@@ -62,7 +62,15 @@
     }];
 }
 -(void)keyboardWillHide:(NSNotification *)notification {
-    [self.view addSubview:self.bottomBar];
+    NSNumber * duration = [[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+    NSNumber * curve = [[notification userInfo] objectForKey:UIKeyboardAnimationCurveUserInfoKey];
+    [UIView animateKeyframesWithDuration:[duration doubleValue]
+                                   delay:0
+                                 options:[curve intValue]
+                              animations:^{
+                                  self.bottomBarDistanceFromBottom.constant = 0;
+                                  [self.view layoutIfNeeded];
+                              } completion:^(BOOL didComplete){ }];
 }
 -(void)addMessage:(NSString *)message {
     CGRect rect = self.view.frame;
@@ -99,6 +107,7 @@
     NSString * text = [NSString stringWithFormat:@"%@: %@", self.userName, self.messageField.text];
     [self.client publishMessage:text toTopic:self.groupName];
     self.messageField.text = @"";
+    [self.messageField resignFirstResponder];
 }
 -(void)setMessageField:(UITextView *)messageField {
     _messageField = messageField;
