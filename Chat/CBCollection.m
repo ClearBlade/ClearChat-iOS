@@ -46,10 +46,10 @@
             [arrayOfItems addObject:newItem];
             
         }
-        successCallback(arrayOfItems);
+        CALL_IF_EXISTS(successCallback, arrayOfItems);
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        failureCallback(error, JSON);
+        CALL_IF_EXISTS(failureCallback, error, JSON);
     }];
     [operation start];
 }
@@ -80,9 +80,9 @@
                 [arrayOfItems addObject:newItem];
             }
         }
-        successCallback(arrayOfItems);
+        CALL_IF_EXISTS(successCallback, arrayOfItems);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        failureCallback(error, JSON);
+        CALL_IF_EXISTS(failureCallback, error, JSON);
     }];
     [operation start];
 }
@@ -112,9 +112,9 @@
 //            }
 //        }
         CBItem *newItem = [[CBItem alloc] initWithData:JSON collectionID:collectionID];
-        successCallback(newItem);
+        CALL_IF_EXISTS(successCallback, newItem);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        failureCallback(error, JSON);
+        CALL_IF_EXISTS(failureCallback, error, JSON);
     }];
     [operation start];
 }
@@ -149,9 +149,9 @@
                 [arrayOfItems addObject:newItem];
             }
         }
-        successCallback(arrayOfItems);
+        CALL_IF_EXISTS(successCallback, arrayOfItems);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        failureCallback(error, JSON);
+        CALL_IF_EXISTS(failureCallback, error, JSON);
     }];
     [operation start];
 }
@@ -182,9 +182,9 @@
                 [arrayOfItems addObject:newItem];
             }
         }
-        successCallback(arrayOfItems);
+        CALL_IF_EXISTS(successCallback, arrayOfItems);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        failureCallback(error, JSON);
+        CALL_IF_EXISTS(failureCallback, error, JSON);
     }];
     [operation start];
 }

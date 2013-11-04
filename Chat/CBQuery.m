@@ -164,9 +164,9 @@
                 }
             }
         }
-        successCallback(arrayOfItems);
+        CALL_IF_EXISTS(successCallback, arrayOfItems);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        failureCallback(error, JSON);
+        CALL_IF_EXISTS(failureCallback, error, JSON);
     }];
     [operation start];
 }
@@ -178,7 +178,7 @@
     NSMutableArray *metaQuery = [[NSMutableArray alloc] initWithObjects:OR, nil];
     CBHTTPClient *client = [[CBHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:PLATFORM_URL]];
     [client setAppKey:[NSString stringWithFormat:@"%@", [ClearBlade appKey]] AppSecret:[NSString stringWithFormat:@"%@", [ClearBlade appSecret]]];
-    NSString *path = [NSString stringWithFormat:@"api/%@", collectionID];
+    NSString *path = [NSString stringWithFormat:API_PATH, collectionID];
     NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
     [data setObject:metaQuery forKey:@"query"];
     [data setObject:changes forKey:@"$set"];
@@ -198,9 +198,9 @@
 			CBItem *newItem = [[CBItem alloc] initWithData: newdict collectionID:collectionID];
 			[arrayOfItems addObject:newItem];
         }
-        successCallback(arrayOfItems);
+        CALL_IF_EXISTS(successCallback,arrayOfItems);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        failureCallback(error, JSON);
+        CALL_IF_EXISTS(failureCallback, error, JSON);
     }];
     [operation start];
 }
@@ -212,7 +212,7 @@
     }
     CBHTTPClient *client = [[CBHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://platform.clearblade.com"]];
     [client setAppKey:[NSString stringWithFormat:@"%@", [ClearBlade appKey]] AppSecret:[NSString stringWithFormat:@"%@", [ClearBlade appSecret]]];
-    NSString *path = [NSString stringWithFormat:@"api/%@", collectionID];
+    NSString *path = [NSString stringWithFormat:API_PATH, collectionID];
     NSMutableArray *metaQuery = [[NSMutableArray alloc] initWithObjects:OR, nil];
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:metaQuery options:0 error:nil];
     NSString* jsonString = [[NSString alloc] initWithBytes:[jsonData bytes] length:[jsonData length] encoding:NSUTF8StringEncoding];
@@ -232,9 +232,9 @@
                 [arrayOfItems addObject:newItem];
             }
         }
-        successCallback(arrayOfItems);
+        CALL_IF_EXISTS(successCallback, arrayOfItems);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        failureCallback(error, JSON);
+            CALL_IF_EXISTS(failureCallback, error, JSON);
     }];
     [operation start];
 }

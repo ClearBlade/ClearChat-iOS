@@ -8,12 +8,13 @@
 
 #import "chatAppDelegate.h"
 #import "CBAPI.h"
+#import "chatConstants.h"
 
 @implementation chatAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [ClearBlade initAppKey:@"525542228ab3a3212a06bd81" AppSecret:@"MNDDJ0POOIC98VTS9ZQZQ5JBQB0FKI"];
+    [ClearBlade initAppKey:CHAT_APP_KEY AppSecret:CHAT_APP_SECRET];
     // Override point for customization after application launch.
     return YES;
 }
