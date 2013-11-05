@@ -9,15 +9,15 @@
 #ifndef Chat_CBConstants_h
 #define Chat_CBConstants_h
 
-#ifdef USE_DEV
+/*#ifdef USE_DEV
 #define PLATFORM_URL @"http://ec2-23-23-31-115.compute-1.amazonaws.com:8080"
 #define MESSAGE_PLATFORM_URL @"tcp://ec2-23-23-31-115.compute-1.amazonaws.com:1883"
 #define API_PATH @"api/%@"
-#else
+#else*/
 #define PLATFORM_URL @"http://platform.clearblade.com"
 #define MESSAGE_PLATFORM_URL @"tcp://platform.clearblade.com:1883"
 #define API_PATH @"apidev/%@"
-#endif
+//#endif
 
 #define CALL_IF_EXISTS(method, ...) if ((method) != nil) (method)(__VA_ARGS__)
 #define ITEM_ID @"itemId"

@@ -90,7 +90,12 @@
 }
 -(void)userExists {
     self.errorMessageField.hidden = NO;
-    self.errorMessageField.text = @"Username already exists";
+    self.errorMessageField.text = @"Welcome Back";
+    UIStoryboard * storyboard = self.storyboard;
+    chatNavigationViewController * controller =[storyboard instantiateViewControllerWithIdentifier:POST_LOGIN_CONTROLLER];
+    controller.logoutDelegate = self;
+    controller.userName = self.userName;
+    [self presentViewController:controller animated:YES completion:^{}];
 }
 - (IBAction)userNameGetFocus:(id)sender {
     self.userNameGroupPosition = @([self.userNameFieldGroup center].y);
