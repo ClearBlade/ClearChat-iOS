@@ -10,6 +10,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CBItem.h"
+#import "CBConstants.h"
 /**
 Class representing a query that can be used in operations on Platform
 */

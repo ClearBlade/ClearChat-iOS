@@ -14,8 +14,8 @@
 #define MESSAGE_PLATFORM_URL @"tcp://ec2-23-23-31-115.compute-1.amazonaws.com:1883"
 #define API_PATH @"api/%@"
 #else*/
-#define PLATFORM_URL @"http://platform.clearblade.com"
-#define MESSAGE_PLATFORM_URL @"tcp://platform.clearblade.com:1883"
+#define PLATFORM_URL @"https://platform.clearblade.com"
+#define MESSAGE_PLATFORM_URL @"tcp://64.49.226.26:1883"
 #define API_PATH @"apidev/%@"
 //#endif
 

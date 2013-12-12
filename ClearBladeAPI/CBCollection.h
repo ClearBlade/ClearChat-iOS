@@ -11,6 +11,7 @@
 #import <Foundation/Foundation.h>
 #import "CBQuery.h"
 #import "CBAPI.h"
+#import "CBConstants.h"
 /**
 Class for dealing with ClearBlade Platform Collections.
 */

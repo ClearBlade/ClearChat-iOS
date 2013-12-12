@@ -29,7 +29,7 @@
 
 -(void) fetchWithSuccessCallback: (void (^)(NSMutableArray *))successCallback  ErrorCallback: (void (^)(NSError *, __strong id))failureCallback {
     
-    CBHTTPClient *client = [[CBHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"https://platform.clearblade.com"]];
+    CBHTTPClient *client = [[CBHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:PLATFORM_URL]];
     [client setAppKey: [NSString stringWithFormat:@"%@", [ClearBlade appKey]] AppSecret:[NSString stringWithFormat:@"%@", [ClearBlade appSecret]] ];
     NSString *path = [NSString stringWithFormat:@"api/%@", collectionID];
     NSMutableURLRequest *request = [client requestWithMethod:@"GET" path:path parameters:nil];
@@ -57,7 +57,7 @@
     if([query.OR count] < 1) {
         [query.OR addObject:query.query];
     }
-    CBHTTPClient *client = [[CBHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"https://platform.clearblade.com"]];
+    CBHTTPClient *client = [[CBHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:PLATFORM_URL]];
     [client setAppKey:[NSString stringWithFormat:@"%@", [ClearBlade appKey]] AppSecret:[NSString stringWithFormat:@"%@", [ClearBlade appSecret]]];
     NSString *path = [NSString stringWithFormat:@"api/%@", collectionID];
     NSMutableArray *metaQuery = [[NSMutableArray alloc] initWithObjects:query.OR, nil];
@@ -87,7 +87,7 @@
 }
 
 -(void) createWithData: (NSMutableDictionary *)data WithSuccessCallback: (void (^)(CBItem *))successCallback ErrorCallback: (void (^)(NSError *, __strong id))failureCallback {
-    CBHTTPClient *client = [[CBHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"https://platform.clearblade.com"]];
+    CBHTTPClient *client = [[CBHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:PLATFORM_URL]];
     [client setAppKey:[NSString stringWithFormat:@"%@", [ClearBlade appKey]] AppSecret:[NSString stringWithFormat:@"%@", [ClearBlade appSecret]]];
     NSString *path = [NSString stringWithFormat:@"api/%@", collectionID];
     NSMutableURLRequest *request = [client requestWithMethod:@"POST" path:path parameters:nil];
@@ -121,7 +121,7 @@
         [query.OR addObject:query.query];
     }
     NSMutableArray *metaQuery = [[NSMutableArray alloc] initWithObjects:[query OR], nil];
-    CBHTTPClient *client = [[CBHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"https://platform.clearblade.com"]];
+    CBHTTPClient *client = [[CBHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:PLATFORM_URL]];
     [client setAppKey:[NSString stringWithFormat:@"%@", [ClearBlade appKey]] AppSecret:[NSString stringWithFormat:@"%@", [ClearBlade appSecret]]];
     NSString *path = [NSString stringWithFormat:@"api/%@", collectionID];
     NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
