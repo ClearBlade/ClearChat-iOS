@@ -14,7 +14,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [ClearBlade initAppKey:CHAT_APP_KEY AppSecret:CHAT_APP_SECRET];
+    [ClearBlade initSettingsWithAppKey:CHAT_APP_KEY withAppSecret:CHAT_APP_SECRET];
     // Override point for customization after application launch.
     return YES;
 }
