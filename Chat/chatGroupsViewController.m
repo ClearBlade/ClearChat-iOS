@@ -49,7 +49,7 @@
     BOOL isTextUnique = YES;
     NSString * searchText = [text lowercaseString];
     for (CBItem * result in self.data) {
-        NSString * resultName = [[result getValueFor:CHAT_GROUP_NAME_FIELD] lowercaseString];
+        NSString * resultName = [[result objectForKey:CHAT_GROUP_NAME_FIELD] lowercaseString];
         if ([resultName hasPrefix:searchText]) {
             [self.searchResults addObject:result];
             if ([resultName isEqualToString:searchText]) {
@@ -108,7 +108,7 @@
 #ifdef CHAT_SKIP_GROUPS
         [self selectFirstGroup];
 #endif
-    } ErrorCallback:^(NSError * error, id extra) {
+    } withErrorCallback:^(NSError * error, id extra) {
         [self.spinner stopAnimating];
     }];
     
@@ -151,7 +151,7 @@
         int index = [indexPath indexAtPosition:1];
     
         CBItem * itemAtIndex = [[self dataForTableView:tableView] objectAtIndex:index];
-        cell.textLabel.text = [itemAtIndex getValueFor:CHAT_GROUP_NAME_FIELD];
+        cell.textLabel.text = [itemAtIndex objectForKey:CHAT_GROUP_NAME_FIELD];
     }
     return cell;
 }
@@ -159,9 +159,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     CBItem * item;
     if ([self shouldShowCreateNewGroup:tableView] && [indexPath indexAtPosition:0] == 0) {
-        item = [[CBItem alloc] initWithData:@{CHAT_GROUP_NAME_FIELD:self.createNewGroupName}
-                                                       collectionID:CHAT_GROUPS_COLLECTION];
-        [item save];
+        item = [CBItem itemWithData:@{CHAT_GROUP_NAME_FIELD:self.createNewGroupName}
+                        withCollectionID:CHAT_GROUPS_COLLECTION];
+        [item saveWithSuccessCallback:nil withErrorCallback:nil];
     } else {
         item = [[self dataForTableView:tableView] objectAtIndex:[indexPath indexAtPosition:1]];
     }
@@ -179,7 +179,7 @@
         return;
     }
     else {
-        controller.groupName = [group getValueFor:CHAT_GROUP_NAME_FIELD];
+        controller.groupName = [group objectForKey:CHAT_GROUP_NAME_FIELD];
         controller.userName = self.userName;
     }
     [(UISearchDisplayController *)self.searchDisplayController  setActive:NO animated:YES];
