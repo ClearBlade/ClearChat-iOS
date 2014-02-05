@@ -14,7 +14,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [ClearBlade initSettingsWithAppKey:CHAT_APP_KEY withAppSecret:CHAT_APP_SECRET];
+    NSError *error = nil;
+    [ClearBlade initSettingsSyncWithSystemKey:CHAT_APP_KEY
+                             withSystemSecret:CHAT_APP_SECRET
+                                  withOptions:nil
+                                    withError:&error];
     // Override point for customization after application launch.
     return YES;
 }
