@@ -148,7 +148,7 @@
         ((chatGroupsCreateRowTableViewCell *)cell).groupName.text = self.createNewGroupName;
     } else {
         cell = [self.tableView dequeueReusableCellWithIdentifier:TABLE_ROW];
-        int index = [indexPath indexAtPosition:1];
+        int index = (int)[indexPath indexAtPosition:1];
     
         CBItem * itemAtIndex = [[self dataForTableView:tableView] objectAtIndex:index];
         cell.textLabel.text = [itemAtIndex objectForKey:CHAT_GROUP_NAME_FIELD];
