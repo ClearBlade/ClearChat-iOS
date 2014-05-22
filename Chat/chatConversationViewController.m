@@ -44,6 +44,7 @@
     [center addObserver:self selector:@selector(keyboardWillHide:)
                    name:UIKeyboardWillHideNotification object:nil];
     [self.client connectToHost:[NSURL URLWithString:MESSAGE_PLATFORM_URL]];
+    [self.client subscribeToTopic:self.groupName];
     [self textViewDidChange:self.messageField];
 }
 -(void)viewDidAppear:(BOOL)animated {
@@ -138,7 +139,7 @@
     
 }
 -(void)messageClient:(CBMessageClient *)client didConnect:(CBMessageClientConnectStatus)status {
-    [client subscribeToTopic:self.groupName];
+    NSLog(@"connected");
 }
 -(void)messageClient:(CBMessageClient *)client didReceiveMessage:(CBMessage *)message {
     [self addMessage:[message payloadText]];

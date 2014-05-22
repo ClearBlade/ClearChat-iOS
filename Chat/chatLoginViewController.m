@@ -64,21 +64,21 @@
     self.errorMessageField.hidden = YES;
     CBQuery * usersQuery = [[CBQuery alloc] initWithCollectionID:CHAT_USERS_COLLECTION];
     [usersQuery equalTo:self.userName for:CHAT_USER_FIELD];
-    [usersQuery fetchWithSuccessCallback:^(NSMutableArray * data) {
+    [usersQuery fetchWithSuccessCallback:^(CBQueryResponse * resp) {
         [self.spinner stopAnimating];
-        if (data.count > 0) {
+        if ([[resp dataItems] count] > 0) {
             [self userExists];
         } else {
             [self userDoesNotExist];
         }
-    } ErrorCallback:^(NSError * error, id object) {
+    } withErrorCallback:^(NSError * error, id object) {
         [self.spinner stopAnimating];
     }];
 }
 -(void)userDoesNotExist {
     UIStoryboard * storyboard = self.storyboard;
-    CBItem * newUser = [[CBItem alloc] initWithData:@{CHAT_USER_FIELD: self.userName} collectionID:CHAT_USERS_COLLECTION];
-    [newUser save];
+    CBItem * newUser = [CBItem itemWithData:@{CHAT_USER_FIELD: self.userName} withCollectionID:CHAT_USERS_COLLECTION];
+    [newUser saveWithSuccessCallback:nil withErrorCallback:nil];
     chatNavigationViewController * controller =[storyboard instantiateViewControllerWithIdentifier:POST_LOGIN_CONTROLLER];
     controller.logoutDelegate = self;
     controller.userName = self.userName;
@@ -90,7 +90,12 @@
 }
 -(void)userExists {
     self.errorMessageField.hidden = NO;
-    self.errorMessageField.text = @"Username already exists";
+    self.errorMessageField.text = @"Welcome Back";
+    UIStoryboard * storyboard = self.storyboard;
+    chatNavigationViewController * controller =[storyboard instantiateViewControllerWithIdentifier:POST_LOGIN_CONTROLLER];
+    controller.logoutDelegate = self;
+    controller.userName = self.userName;
+    [self presentViewController:controller animated:YES completion:^{}];
 }
 - (IBAction)userNameGetFocus:(id)sender {
     self.userNameGroupPosition = @([self.userNameFieldGroup center].y);
@@ -102,7 +107,7 @@
     CBQuery * query = [[CBQuery alloc] initWithCollectionID:CHAT_USERS_COLLECTION];
     [[query equalTo:self.userName for:CHAT_USER_FIELD] removeWithSuccessCallback:^(NSMutableArray * result) {
         
-    } ErrorCallback:^(NSError * error, id extra) {
+    } withErrorCallback:^(NSError * error, id extra) {
     
     }];
     [self dismissViewControllerAnimated:YES completion:^{}];
