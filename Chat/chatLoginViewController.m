@@ -64,9 +64,9 @@
     self.errorMessageField.hidden = YES;
     CBQuery * usersQuery = [[CBQuery alloc] initWithCollectionID:CHAT_USERS_COLLECTION];
     [usersQuery equalTo:self.userName for:CHAT_USER_FIELD];
-    [usersQuery fetchWithSuccessCallback:^(NSMutableArray * data) {
+    [usersQuery fetchWithSuccessCallback:^(CBQueryResponse * resp) {
         [self.spinner stopAnimating];
-        if (data.count > 0) {
+        if ([[resp dataItems] count] > 0) {
             [self userExists];
         } else {
             [self userDoesNotExist];

@@ -102,9 +102,9 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     //Reloads transparently if there has already been something loaded
-    [self.collection fetchWithSuccessCallback:^(NSMutableArray *data) {
+    [self.collection fetchWithSuccessCallback:^(CBQueryResponse *resp) {
         [self.spinner stopAnimating];
-        [self reload:data];
+        [self reload:[resp dataItems]];
 #ifdef CHAT_SKIP_GROUPS
         [self selectFirstGroup];
 #endif
